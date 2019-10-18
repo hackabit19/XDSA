@@ -13,17 +13,14 @@ def gen():
     cap = cv2.VideoCapture(1)
     global frame
     while True:
-        try:
-            ret,frame = cap.read()
-            if ret ==True:
-                flag , encodedImage = cv2.imencode(".jpg" , frame)
-                if not flag:
-                    continue
-                yield (b'--frame\r\n'
-                       b'Content-Type: image/jpeg\r\n\r\n' + bytearray(encodedImage) + b'\r\n')
-            else:
+        ret,frame = cap.read()
+        if ret ==True:
+            flag , encodedImage = cv2.imencode(".jpg" , frame)
+            if not flag:
                 continue
-        except:
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + bytearray(encodedImage) + b'\r\n')
+        else:
             continue
     cap.release()
 
