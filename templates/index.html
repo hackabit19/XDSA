@@ -12,13 +12,18 @@
     <img src="{{ url_for('video_feed') }}">
     <br>
     <br>
+    <p id = "caption"></p>
     <br>
     <script type=text/javascript>
             $(function() {
               $('a#caption_buton').bind('click', function() {
                 $.getJSON('/generate_caption',
                     function(data) {
-                  //do nothing
+                      // var cap = JSON.parse(data)
+                      console.log(data)
+                      console.log("done")
+                      console.log(data.caption)
+                      document.getElementById('caption').innerHTML = data.caption;
                 });
                 return false;
               });
@@ -29,5 +34,6 @@
         <a href=# id=caption_buton><button class='btn btn-default'>Test</button></a>
       </form>
     </div>
+
   </body>
 </html>

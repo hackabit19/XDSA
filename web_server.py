@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response , json
 import cv2
 from captionbot import CaptionBot
 import numpy as np
@@ -39,9 +39,10 @@ def generate_caption():
     global frame
     cv2.imwrite('image.jpg' , frame)
     # caption = c.file_caption('/home/aditya/Hack-a-bit2019/' + 'image.jpg')
-    caption = c.file_caption("C:/Users/Bharat/Desktop/Caption-Goggles/image.jpg")
+    caption = c.file_caption("C:/Users/Bharat/Desktop/Hack-A-Bit 2019/image.jpg")
     print(caption)
-    return caption
+    res = {'caption':caption}
+    return json.dumps(res)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
