@@ -9,8 +9,8 @@ frame = None
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username':"Deepak"}
-    return render_template('index.html' , user= user)
+    user = {'username' : 'Deepak'}
+    return render_template('index.html' , user = user)
 
 def gen():
     cap = cv2.VideoCapture(1)
@@ -41,7 +41,7 @@ def generate_caption():
     # caption = c.file_caption('/home/aditya/Hack-a-bit2019/' + 'image.jpg')
     caption = c.file_caption("C:/Users/Bharat/Desktop/Caption-Goggles/image.jpg")
     print(caption)
-    # return caption
+    return caption
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
