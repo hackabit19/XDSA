@@ -9,8 +9,11 @@ frame = None
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username' : 'Deepak'}
-    return render_template('index.html' , user = user)
+    return render_template('index.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 def gen():
     cap = cv2.VideoCapture(1)

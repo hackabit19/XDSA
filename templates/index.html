@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <meta charset="utf-8">
-    <title>HAVAS</title>
+    <link href="/static/css/style.css" rel="stylesheet" media="all" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>XDSA</title>
   </head>
   <body>
-    <h1>Hello , {{ user['username'] }}</h1>
+    <div class="item1" data-aos="zoom-out">HACK-A-BIT 2019</div>
     <br>
-    <h1>Video Streaming Demonstration</h1>
-    <img src="{{ url_for('video_feed') }}">
+    <div class="item2" data-aos="zoom-out">Our prototype describes the scene captured by a camera and enables a blind or visually impaired person to <br> "SEE"</div>
     <br>
+    <div class="item3" data-aos="zoom-out">You can test it with your webcam or see a live demo!</div>
     <br>
-    <p id = "caption"></p>
-    <br>
-    <script type=text/javascript>
-            $(function() {
-              $('a#caption_buton').bind('click', function() {
-                $.getJSON('/generate_caption',
-                    function(data) {
-                      // var cap = JSON.parse(data)
-                      console.log(data)
-                      console.log("done")
-                      console.log(data.caption)
-                      document.getElementById('caption').innerHTML = data.caption;
-                });
-                return false;
-              });
-            });
-    </script>
-    <div class='container'>
-      <form>
-        <a href=# id=caption_buton><button class='btn btn-default'>Test</button></a>
-      </form>
+    <div class="cam">
+      <a href="{{ url_for('home') }}">
+        <button class="btn draw-border" style="font-size:50px">Live Video Testing
+          <i class="fa fa-video-camera" style="font-size:18px"></i>
+          <i class="fa fa-video-camera" style="font-size:24px"></i>
+          <i class="fa fa-video-camera" style="font-size:36px;color:red"></i>
+        </button>
+      </a>
     </div>
-
   </body>
 </html>
+<script>
+  AOS.init({
+    duration:1200,
+  });
+</script>
