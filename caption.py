@@ -1,6 +1,8 @@
 import cv2
 from captionbot import CaptionBot
+import win32com.client as wincl
 
+speak = wincl.Dispatch("SAPI.SpVoice")
 c = CaptionBot()
 cap = cv2.VideoCapture(0)
 while True:
@@ -12,6 +14,7 @@ while True:
         cv2.imwrite('image.jpg',f)
         caption = c.file_caption('/home/aditya/Hack-a-bit2019/' + 'image.jpg')
         print(caption)
+        speak.Speak(caption)
     elif key == 27:
         break
 cv2.destroyAllWindows()
