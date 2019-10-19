@@ -1,5 +1,6 @@
 # XDSA-Chat 
 A very simple application that uses Auth0 to protect a route to generate authorization tokens for Ably.  In addition to protecting the route, we are also using an ID token to get information about the connected user. We are using Ably APIs for realtime messaging.
+![](https://i.ibb.co/vq8jhDT/ably.png)
 
 # Setup
 Start by adding your Auth0 configurations in `/front/config.js` and `/api/config.js`.
