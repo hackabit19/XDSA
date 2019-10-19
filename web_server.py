@@ -49,7 +49,7 @@ def run_detection(image, interpreter):
     return out_scores, out_boxes, out_classes
 
 def gen():
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     global frame
     global interpreter
     global colors
@@ -84,8 +84,8 @@ def video_feed():
 @app.route('/generate_caption')
 def generate_caption():
     print("Generating Caption...")
-    # caption = c.file_caption('/home/aditya/Hack-a-bit2019/' + 'image.jpg')
-    caption = c.file_caption("C:/Users/Bharat/Desktop/Hack-A-Bit 2019/image.jpg")
+    caption = c.file_caption('/home/erik/xdsa/XDSA/' + 'image.jpg')
+    #caption = c.file_caption("C:/Users/Bharat/Desktop/Hack-A-Bit 2019/image.jpg")
     print(caption)
     res = {'caption':caption}
     return json.dumps(res)

@@ -17,10 +17,10 @@ body {
 }
 
 img {
-  height: 300px;
-  width: 900px;
-  position: relative;
-  margin: 20px 250px 50px 220px;
+  height: 500px;
+  width: 840px;
+  position: absolute;
+  margin: 0px 250px 50px 0px;
 }
 
 #caption_buton {
