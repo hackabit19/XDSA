@@ -3,16 +3,26 @@
   <head>
     <meta charset="utf-8">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="static/css/home.css" type="text/css">
+    <link rel="stylesheet" href="static/css/home_st.css" type="text/css">
     <title>HAVAS</title>
   </head>
   <body>
-    <h1 id="title">Video Streaming Demonstration</h1>
+    <!-- <h1 id="title">Video Streaming Demonstration</h1>
     <h2 id="team">XDSA</h2>
-    <br>
-    <div class="vid">
-        <p><img src="{{ url_for('video_feed') }}"></p>
-    </div>
+    <br> -->
+    <div class="container">
+      <h1>Live Demo</h1>
+        <div class="screen">
+          <div class="case">
+            <img src="{{ url_for('video_feed') }}">
+            <div class="webcam"></div>
+            <div class="display"></div>
+          </div>
+          <div class="keyboard-container">
+            <div class="grey-area"></div>
+          </div>
+        </div>
+      </div>
     <br>
     <br>
     <p id = "caption"></p>
