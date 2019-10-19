@@ -5,6 +5,10 @@ import cv2
 import numpy as np
 from keras import backend as K
 import tensorflow as tf
+from pygame import mixer
+
+mixer.init()
+mixer.music.load('beep-01a.mp3')
 
 def read_classes(classes_path):
     with open(classes_path) as f:
@@ -88,6 +92,7 @@ def draw_boxes(image, out_scores, out_boxes, out_classes, class_names, colors):
         factor = area/(640*480)
         if factor > 0.5:
             print("{} is in close proximity".format(predicted_class))
+            mixer.music.play()
         # colors: RGB, opencv: BGR
         cv2.rectangle(image, (left, top), (right, bottom), tuple(reversed(colors[c])), 6)
 
