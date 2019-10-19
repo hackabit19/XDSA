@@ -82,7 +82,7 @@ def draw_boxes(image, out_scores, out_boxes, out_classes, class_names, colors):
         left = max(0, np.floor(left + 0.5).astype('int32'))
         bottom = min(h, np.floor(bottom + 0.5).astype('int32'))
         right = min(w, np.floor(right + 0.5).astype('int32'))
-        print(label, (left, top), (right, bottom))
+        # print(label, (left, top), (right, bottom))
 
         area = abs(left-right)*abs(top-bottom)
         factor = area/(640*480)
