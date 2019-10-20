@@ -18,6 +18,8 @@ The prototype describes the scene captured by the wireless camera and also provi
 - Keras
 - Bootstrap
 
+![](https://i.ibb.co/Th2Fszj/pic1.png)
+
 ## Instructions to run the script
 1. Install all the dependencies ```pip install -r requirements.txt```
 2. Go into the project directory using ```cmd``` or ```terminal```
