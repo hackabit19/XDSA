@@ -1,4 +1,4 @@
-# HAVAS - Human's Advanced Visual Assistance System
+# H.A.V.A.S - Human's Advanced Visual Assistance System
 
 ## Idea 
 The prototype describes the scene captured by the wireless camera and also provides object detection and localization close to real-time on our local workstation. Using the above it aids the blind to not run into or bump into someone or a certain object.
