@@ -1,0 +1,15 @@
+os
+time
+tarfile
+cv2
+glob
+tqdm
+numpy
+tensorflow
+caption_bot
+keras
+random
+pygame
+colorsys
+flask
+pyttsx3
