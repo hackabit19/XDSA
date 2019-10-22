@@ -69,3 +69,4 @@ output_details = interpreter.get_output_details()
 class_names = read_classes('model_data/coco_classes.txt')
 colors = generate_colors(class_names)
 real_time_object_detection(interpreter, colors)
+
